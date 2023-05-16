@@ -1,0 +1,19 @@
+name: basic_cleaning
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      path_data:
+        description: path to data
+        type: string
+
+      path_data_clean:
+        description: path to save clean data
+        type: string
+
+
+    command: >-
+        python clean_data.py  --path_data {path_data}  --path_data_clean {path_data_clean} 
+
